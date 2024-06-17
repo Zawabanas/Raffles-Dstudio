@@ -1,0 +1,181 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('/assets/images/bkg.jpg');
+  background-size: cover;
+  background-attachment: fixed; /* Hace que el fondo permanezca fijo */
+  overflow: hidden; /* Evita el desplazamiento de la página */
+}
+
+.container-form {
+  display: flex;
+  flex-direction: row;
+  border-radius: 20px;
+  box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
+  height: 500px;
+  width: 75%;
+  max-width: 900px;
+  transition: all 1s ease;
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+  justify-content: center;
+  align-items: center;
+  position: fixed; /* Hace que el contenedor del formulario esté fijo */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centra el contenedor del formulario */
+  z-index: 1;
+}
+
+.information {
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #071457;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 20px; /* Añade padding para mejorar la apariencia */
+}
+
+.info-childs {
+  width: 100%;
+  padding: 0 30px;
+}
+
+.info-childs h2 {
+  font-size: 2.5rem;
+  color: #f9f9f9;
+}
+
+.form-information {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 20px; /* Añade padding para mejorar la apariencia */
+}
+
+.form-information-childs {
+  width: 100%;
+  padding: 0 30px;
+}
+
+.form-information-childs h2 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 20px; /* Añade margen inferior para separar del resto del formulario */
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form label {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  padding: 0 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+}
+
+.form label input {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  color: #333;
+}
+
+.form label i {
+  color: #a7a7a7;
+}
+
+.form input[type="submit"] {
+  background-color: #9191bd;
+  color: #fff;
+  border-radius: 20px;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+}
+
+
+
+.form input[type="submit"]:hover {
+  background-color: #7a7a9a;
+}
+
+.btn-forgot-password {
+  display: block;
+  margin-top: 10px;
+  color: #9191bd;
+  text-decoration: none;
+}
+
+.btn-forgot-password:hover {
+  color: #7a7a9a;
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 850px) {
+  html {
+      font-size: 12px;
+  }
+
+  .container-form {
+      flex-direction: column;
+      height: auto;
+  }
+
+  .information {
+      width: 100%;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 20px;
+  }
+
+  .form-information {
+      width: 100%;
+      border-top-left-radius: 0;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  html {
+      font-size: 14px;
+  }
+
+  .container-form {
+      height: auto;
+      width: auto;
+  }
+
+  .information {
+      padding: 20px;
+  }
+
+  .form-information {
+      padding: 20px;
+  }
+}

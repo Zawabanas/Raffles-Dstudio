@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="/assets/css/styles_a.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="admin-container">
+        <nav class="admin-nav">
+            <div class="admin-nav-header">
+                <img src="/assets/images/logo.png" alt="Logo" class="admin-logo">
+                <span class="admin-title">Admin Panel</span>
+                <button id="toggleNavBtn" class="toggle-nav-btn">&equiv;</button>
+            </div>
+            <ul class="admin-nav-list">
+                <li class="nav-item">
+                    <a id="nav-raffles" class="nav-link" href="#">Rifas</a>
+                </li>
+                <li class="participant-nav-item">
+                    <a id="nav-participants" class="nav-link" href="#">Participantes</a>
+                </li>
+                <li class="nav-item">
+                    <a id="nav-users" class="nav-link" href="#">Usuarios</a>
+                </li>
+            </ul>
+        </nav>
+        <main class="admin-main">
+            <section id="section-raffles" class="admin-section hidden">
+                <h2>Rifas</h2>
+                <button id="createRaffleBtn" class="btn btn-primary">Crear Rifa</button>
+                <div id="rafflesList" class="raffles-list"></div>
+            </section>
+            <section id="section-participants" class="admin-section hidden">
+                <h2>Participantes</h2>
+                <button id="createParticipantBtn" class="btn btn-primary">Agregar Participante</button>
+                <div id="participantsList" class="participants-list"></div>
+            </section>
+            <section id="section-users" class="admin-section hidden">
+                <h2>Usuarios</h2>
+                <ul id="usersList" class="users-list"></ul>
+                <button id="createUserBtn" class="btn btn-primary">Agregar Usuario</button>
+            </section>
+        </main>
+    </div>
+    <script src="assets/js/admin.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/socket.io/socket.io.js"></script>
+</body>
+
+</html>
